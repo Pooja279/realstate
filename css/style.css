@@ -2702,6 +2702,18 @@ textarea.form-control {
     -webkit-box-shadow: 0 0 0 0 rgba(94, 165, 29, 0);
     box-shadow: 0 0 0 0 rgba(94, 165, 29, 0); } }
 
+.whatsapp-logo {
+  position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.whatsapp-logo img {
+  width: 60px; /* Adjust the size as needed */
+  height: 60px; /* Adjust the size as needed */
+}
+
 .heading-section .subheading {
   font-size: 13px;
   display: block;

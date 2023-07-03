@@ -2,7 +2,7 @@
 <html lang="en">
    <!-- Mirrored from preview.colorlib.com/theme/oakberry/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2023 23:42:43 GMT -->
    <head>
-      <title>Oakberry - Free Bootstrap 5 Template by Colorlib</title>
+      <title>Omen Properties</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <link rel="preconnect" href="https://fonts.gstatic.com/">
@@ -15,6 +15,10 @@
       <link rel="stylesheet" href="css/glightbox.min.css">
       <link rel="stylesheet" href="css/aos.css">
       <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- Add this line in the <head> section of your HTML file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-ZbBLbf2bws/V6BngPog1zv/IEJZMIBn9VNYIE7tVUZ2G6w3mFglkRrm8nB+/ogm8W/22mOUlph0U4cJegCDvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
       <script nonce="8329a980-a1dc-45ca-9dd8-3d2214076a3f">(function(w,d){!function(f,g,h,i){f[h]=f[h]||{};f[h].executed=[];f.zaraz={deferred:[],listeners:[]};f.zaraz.q=[];f.zaraz._f=function(j){return function(){var k=Array.prototype.slice.call(arguments);f.zaraz.q.push({m:j,a:k})}};for(const l of["track","set","debug"])f.zaraz[l]=f.zaraz._f(l);f.zaraz.init=()=>{var m=g.getElementsByTagName(i)[0],n=g.createElement(i),o=g.getElementsByTagName("title")[0];o&&(f[h].t=g.getElementsByTagName("title")[0].text);f[h].x=Math.random();f[h].w=f.screen.width;f[h].h=f.screen.height;f[h].j=f.innerHeight;f[h].e=f.innerWidth;f[h].l=f.location.href;f[h].r=g.referrer;f[h].k=f.screen.colorDepth;f[h].n=g.characterSet;f[h].o=(new Date).getTimezoneOffset();if(f.dataLayer)for(const s of Object.entries(Object.entries(dataLayer).reduce(((t,u)=>({...t[1],...u[1]})),{})))zaraz.set(s[0],s[1],{scope:"page"});f[h].q=[];for(;f.zaraz.q.length;){const v=f.zaraz.q.shift();f[h].q.push(v)}n.defer=!0;for(const w of[localStorage,sessionStorage])Object.keys(w||{}).filter((y=>y.startsWith("_zaraz_"))).forEach((x=>{try{f[h]["z_"+x.slice(7)]=JSON.parse(w.getItem(x))}catch{f[h]["z_"+x.slice(7)]=w.getItem(x)}}));n.referrerPolicy="origin";n.src="../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(f[h])));m.parentNode.insertBefore(n,m)};["complete","interactive"].includes(g.readyState)?zaraz.init():f.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script>
    </head>
    <body>
@@ -24,7 +28,7 @@
                <div class="col-md topper d-flex mb-md-0 align-items-xl-center">
                   <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-map"></span></div>
                   <div class="text pl-3 pl-md-3">
-                     <p class="con"><span>Free Call</span> <span>+1 234 456 78910</span></p>
+                     <p class="con"><span>Free Call</span> <span>+91 89285 88444</span></p>
                      <p class="con">Call Us Now 24/7 Customer Support</p>
                   </div>
                </div>
@@ -32,7 +36,7 @@
                   <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-paper-plane"></span></div>
                   <div class="text pl-3 pl-md-3">
                      <p class="hr"><span>Our Location</span></p>
-                     <p class="con">Suite 721 New York NY 10016</p>
+                     <p class="con">Near Kotat Mahindra Bank, Elite chauhara, Civil lines, Jhansi, Uttar Pradesh 284002</p>
                   </div>
                </div>
                <div class="col-md topper d-flex mb-md-0 align-items-xl-center">
@@ -48,7 +52,7 @@
       <nav class="navbar navbar-expand-lg  ftco-navbar-light">
          <div class="container-xl">
             <a class="navbar-brand align-items-center" href="index.html">
-            <span class="">Oakberry <small>Real Estate Agency</small></span>
+            <span class="">Omen Properties<small>Real Estate Agency</small></span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa fa-bars"></span> Menu
@@ -56,7 +60,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                   <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                   <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a></li>
                   <li class="nav-item"><a class="nav-link" href="agents.html">Agents</a></li>
                   <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -294,7 +298,7 @@
          <div class="container-xl">
             <div class="row justify-content-center">
                <div class="col-md-8 heading-section text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
-                  <span class="subheading">Oakberry Categories</span>
+                  <span class="subheading">Categories</span>
                   <h2 class="mb-4">Explore Our Categories &amp; Places</h2>
                </div>
             </div>
@@ -546,7 +550,7 @@
             </div>
          </div>
       </section>
-      <section class="ftco-section ftco-about-section">
+      <section class="ftco-section ftco-about-section" id="about">
          <div class="container-xl">
             <div class="row g-xl-5">
                <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
@@ -554,7 +558,7 @@
                </div>
                <div class="col-md-8 heading-section" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                   <span class="subheading">About Us</span>
-                  <h2 class="mb-4">Oakberry A Real Estate Company</h2>
+                  <h2 class="mb-4">Omen Properties A Real Estate Company</h2>
                   <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                   <div class="row py-5">
                      <div class="col-md-6 col-lg-3">
@@ -885,32 +889,8 @@
       <footer class="ftco-footer">
          <div class="container-xl">
             <div class="row mb-5 pb-5 justify-content-between">
-               <div class="col-md-6 col-lg">
-                  <div class="ftco-footer-widget mb-4">
-                     <h2 class="ftco-heading-2 logo d-flex">
-                        <a class="navbar-brand align-items-center" href="index.html">
-                        <span class="">Oakberry <small>Real Estate Agency</small></span>
-                        </a>
-                     </h2>
-                     <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                     <ul class="ftco-footer-social list-unstyled mt-2">
-                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                        <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-md-6 col-lg-2">
-                  <div class="ftco-footer-widget mb-4">
-                     <h2 class="ftco-heading-2">Offers</h2>
-                     <ul class="list-unstyled">
-                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Properties</a></li>
-                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Agents</a></li>
-                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Locations</a></li>
-                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Clients Support</a></li>
-                     </ul>
-                  </div>
-               </div>
+            
+               
                <div class="col-md-6 col-lg-2">
                   <div class="ftco-footer-widget mb-4">
                      <h2 class="ftco-heading-2">Company</h2>
@@ -938,8 +918,8 @@
                      <h2 class="ftco-heading-2">Have a Questions?</h2>
                      <div class="block-23 mb-3">
                         <ul>
-                           <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                           <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                           <li><span class="icon fa fa-map marker"></span><span class="text">Near Kotat Mahindra Bank, Elite chauhara, Civil lines, Jhansi, Uttar Pradesh 284002</span></li>
+                           <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 89285 88444</span></a></li>
                            <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text"><span class="__cf_email__" data-cfemail="f49d9a929bb48d9b8186909b99959d9ada979b99">[email&#160;protected]</span></span></a></li>
                         </ul>
                      </div>
@@ -957,7 +937,13 @@
                </div>
             </div>
          </div>
+        
       </footer>
+      <div class="whatsapp-logo">
+        <a href="https://wa.me/918928588444" target="_blank" rel="noopener">
+            <img src="images/whatsapplogo.png" alt="WhatsApp Logo">
+        </a>
+      </div>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/tiny-slider.js"></script>
       <script src="js/glightbox.min.js"></script>
