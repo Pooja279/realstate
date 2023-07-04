@@ -1,3 +1,27 @@
+<?php
+include 'connection.php'; // Include the database connection
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    $sql = "INSERT INTO contact (name, email, subject,message) VALUES ('$name', '$email', '$subject','$message')";
+
+    if ($conn->query($sql) === TRUE) {
+        $success_message = "Data added successfully.";
+    } else {
+        $error_message = "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+}
+
+
+$conn->close();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
    <!-- Mirrored from preview.colorlib.com/theme/oakberry/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2023 23:42:43 GMT -->
@@ -15,7 +39,7 @@
       <link rel="stylesheet" href="css/glightbox.min.css">
       <link rel="stylesheet" href="css/aos.css">
       <link rel="stylesheet" href="css/style.css">
-      <script nonce="8329a980-a1dc-45ca-9dd8-3d2214076a3f">(function(w,d){!function(f,g,h,i){f[h]=f[h]||{};f[h].executed=[];f.zaraz={deferred:[],listeners:[]};f.zaraz.q=[];f.zaraz._f=function(j){return function(){var k=Array.prototype.slice.call(arguments);f.zaraz.q.push({m:j,a:k})}};for(const l of["track","set","debug"])f.zaraz[l]=f.zaraz._f(l);f.zaraz.init=()=>{var m=g.getElementsByTagName(i)[0],n=g.createElement(i),o=g.getElementsByTagName("title")[0];o&&(f[h].t=g.getElementsByTagName("title")[0].text);f[h].x=Math.random();f[h].w=f.screen.width;f[h].h=f.screen.height;f[h].j=f.innerHeight;f[h].e=f.innerWidth;f[h].l=f.location.href;f[h].r=g.referrer;f[h].k=f.screen.colorDepth;f[h].n=g.characterSet;f[h].o=(new Date).getTimezoneOffset();if(f.dataLayer)for(const s of Object.entries(Object.entries(dataLayer).reduce(((t,u)=>({...t[1],...u[1]})),{})))zaraz.set(s[0],s[1],{scope:"page"});f[h].q=[];for(;f.zaraz.q.length;){const v=f.zaraz.q.shift();f[h].q.push(v)}n.defer=!0;for(const w of[localStorage,sessionStorage])Object.keys(w||{}).filter((y=>y.startsWith("_zaraz_"))).forEach((x=>{try{f[h]["z_"+x.slice(7)]=JSON.parse(w.getItem(x))}catch{f[h]["z_"+x.slice(7)]=w.getItem(x)}}));n.referrerPolicy="origin";n.src="../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(f[h])));m.parentNode.insertBefore(n,m)};["complete","interactive"].includes(g.readyState)?zaraz.init():f.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script>
+      <script nonce="8329a980-a1dc-45ca-9dd8-3d2214076a3f">(function(w,d){!function(f,g,h,i){f[h]=f[h]||{};f[h].executed=[];f.zaraz={deferred:[],listeners:[]};f.zaraz.q=[];f.zaraz._f=function(j){return function(){var k=Array.prototype.slice.call(arguments);f.zaraz.q.push({m:j,a:k})}};for(const l of["track","set","debug"])f.zaraz[l]=f.zaraz._f(l);f.zaraz.init=()=>{var m=g.getElementsByTagName(i)[0],n=g.createElement(i),o=g.getElementsByTagName("title")[0];o&&(f[h].t=g.getElementsByTagName("title")[0].text);f[h].x=Math.random();f[h].w=f.screen.width;f[h].h=f.screen.height;f[h].j=f.innerHeight;f[h].e=f.innerWidth;f[h].l=f.location.href;f[h].r=g.referrer;f[h].k=f.screen.colorDepth;f[h].n=g.characterSet;f[h].o=(new Date).getTimezoneOffset();if(f.dataLayer)for(const s of Object.entries(Object.entries(dataLayer).reduce(((t,u)=>({...t[1],...u[1]})),{})))zaraz.set(s[0],s[1],{scope:"page"});f[h].q=[];for(;f.zaraz.q.length;){const v=f.zaraz.q.shift();f[h].q.push(v)}n.defer=!0;for(const w of[localStorage,sessionStorage])Object.keys(w||{}).filter((y=>y.startsWith("_zaraz_"))).forEach((x=>{try{f[h]["z_"+x.slice(7)]=JSON.parse(w.getItem(x))}catch{f[h]["z_"+x.slice(7)]=w.getItem(x)}}));n.referrerPolicy="origin";n.src="cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(f[h])));m.parentNode.insertBefore(n,m)};["complete","interactive"].includes(g.readyState)?zaraz.init():f.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script>
    </head>
    <body>
       <div class="py-4 top-wrap">
@@ -24,7 +48,7 @@
                <div class="col-md topper d-flex mb-md-0 align-items-xl-center">
                   <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-map"></span></div>
                   <div class="text pl-3 pl-md-3">
-                     <p class="con"><span>Free Call</span> <span>+1 234 456 78910</span></p>
+                     <p class="con"><span>Free Call</span> <span>+91 89285 88444</span></p>
                      <p class="con">Call Us Now 24/7 Customer Support</p>
                   </div>
                </div>
@@ -32,14 +56,14 @@
                   <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-paper-plane"></span></div>
                   <div class="text pl-3 pl-md-3">
                      <p class="hr"><span>Our Location</span></p>
-                     <p class="con">Suite 721 New York NY 10016</p>
+                     <p class="con">NEAR KOTAK MAHINDRA BANK, ELITE CHAURAHA, CIVIL LINES, Jhansi, Uttar Pradesh 284002</p>
                   </div>
                </div>
                <div class="col-md topper d-flex mb-md-0 align-items-xl-center">
                   <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-connectdevelop"></span></div>
                   <div class="text pl-3 pl-md-3">
                      <p class="con"><span>Connect </span> <span>with us</span></p>
-                     <p class="con"><a href="#">Facebook</a> <a href="#">Twitter</a> <a href="#">Dribbble</a></p>
+                     <p class="con"><a href="https://wa.me/918928588444">Whats app</a></p>
                   </div>
                </div>
             </div>
@@ -48,7 +72,7 @@
       <nav class="navbar navbar-expand-lg  ftco-navbar-light">
          <div class="container-xl">
             <a class="navbar-brand align-items-center" href="index.html">
-            <span class="">Oakberry <small>Real Estate Agency</small></span>
+				<img src="images/logo.jpg" style="height:53px; width: 68px;"> 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa fa-bars"></span> Menu
@@ -56,7 +80,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                   <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                   <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a></li>
                   <li class="nav-item"><a class="nav-link" href="agents.html">Agents</a></li>
                   <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -546,7 +570,7 @@
             </div>
          </div>
       </section>
-      <section class="ftco-section ftco-about-section">
+      <section class="ftco-section ftco-about-section" id="#about">
          <div class="container-xl">
             <div class="row g-xl-5">
                <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
@@ -882,25 +906,100 @@
       </div>
       </div>
       </section>
+
+<section class="ftco-section bg-light">
+   <div class="container">
+      <div class="row no-gutters justify-content-center">
+         <div class="col-md-12">
+            <div class="wrapper">
+               <div class="row g-0">
+                  <div class="col-lg-6">
+                     <div class="contact-wrap w-100 p-md-5 p-4">
+                        <h3>Contact us</h3>
+                        <p class="mb-4">We're open for any suggestion or just to have a chat</p>
+                        <div class="row mb-4">
+                           <div class="col-md-4">
+                              <div class="dbox w-100 d-flex align-items-start">
+                                 <div class="text">
+                                    <p><span>Address:</span> NEAR KOTAK MAHINDRA BANK, ELITE CHAURAHA, CIVIL LINES, Jhansi, Uttar Pradesh 284002</p>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-4">
+                              <div class="dbox w-100 d-flex align-items-start">
+                                 <div class="text">
+                                    <p><span>Phone:</span> <a href="tel://1234567920">+91 89285 88444</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <form action="" id="contactForm" method="post" class="contactForm">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="form-group">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                 </div>
+                              </div>
+                              <div class="col-md-12">
+                                 <div class="form-group">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                 </div>
+                              </div>
+                              <div class="col-md-12">
+                                 <div class="form-group">
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                 </div>
+                              </div>
+                              <div class="col-md-12">
+                                 <div class="form-group">
+                                    <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Create a message here"></textarea>
+                                 </div>
+                              </div>
+							  <br>
+                              <div class="col-md-12">
+                                 <div class="form-group">
+                                    <input type="submit" value="Send Message" class="btn btn-primary">
+                                    <div class="submitting"></div>
+                                 </div>
+                              </div>
+							  <br>
+							  <?php if(isset($success_message)) { ?>
+									<div class="success"><?php echo $success_message; ?></div>
+								<?php } ?>
+								<?php if(isset($error_message)) { ?>
+									<div class="error"><?php echo $error_message; ?></div>
+								<?php } ?>
+								<br>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+                  <div class="col-lg-6 d-flex align-items-stretch">
+                     <div id="map" class="bg-white"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
       <footer class="ftco-footer">
          <div class="container-xl">
             <div class="row mb-5 pb-5 justify-content-between">
-               <div class="col-md-6 col-lg">
+               <div class="col-md-8 col-lg-3">
                   <div class="ftco-footer-widget mb-4">
                      <h2 class="ftco-heading-2 logo d-flex">
                         <a class="navbar-brand align-items-center" href="index.html">
-                        <span class="">Oakberry <small>Real Estate Agency</small></span>
+							<img src="images/logo.jpg" style="height:100px; width:234px;">
                         </a>
                      </h2>
                      <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                     <ul class="ftco-footer-social list-unstyled mt-2">
-                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                        <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                     </ul>
+                    
                   </div>
                </div>
-               <div class="col-md-6 col-lg-2">
+               <div class="col-md-8 col-lg-3">
                   <div class="ftco-footer-widget mb-4">
                      <h2 class="ftco-heading-2">Offers</h2>
                      <ul class="list-unstyled">
@@ -911,7 +1010,7 @@
                      </ul>
                   </div>
                </div>
-               <div class="col-md-6 col-lg-2">
+               <div class="col-md-8 col-lg-3">
                   <div class="ftco-footer-widget mb-4">
                      <h2 class="ftco-heading-2">Company</h2>
                      <ul class="list-unstyled">
@@ -922,25 +1021,14 @@
                      </ul>
                   </div>
                </div>
-               <div class="col-md-6 col-lg-2">
-                  <div class="ftco-footer-widget mb-4">
-                     <h2 class="ftco-heading-2">Quick Links</h2>
-                     <ul class="list-unstyled">
-                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Terms &amp; Conditions</a></li>
-                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>User's Guide</a></li>
-                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Support Center</a></li>
-                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Press Info</a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-md-6 col-lg">
+              
+               <div class="col-md-8 col-lg-3">
                   <div class="ftco-footer-widget mb-4">
                      <h2 class="ftco-heading-2">Have a Questions?</h2>
                      <div class="block-23 mb-3">
                         <ul>
-                           <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                           <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                           <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text"><span class="__cf_email__" data-cfemail="f49d9a929bb48d9b8186909b99959d9ada979b99">[email&#160;protected]</span></span></a></li>
+                           <li><span class="icon fa fa-map marker"></span><span class="text">NEAR KOTAK MAHINDRA BANK, ELITE CHAURAHA, CIVIL LINES, Jhansi, Uttar Pradesh 284002</span></li>
+                           <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 89285 88444</span></a></li>
                         </ul>
                      </div>
                   </div>
@@ -952,7 +1040,7 @@
                <div class="row">
                   <div class="col-md-12 text-center">
                      <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 13px;">
-                        Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank" rel="nofollow noopener">Colorlib</a>
+                        Copyright &copy;<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | Designed & Developed <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://crazywebdev.com/" target="_blank" rel="nofollow noopener">CrazyWebDev Technologies</a>
                   </div>
                </div>
             </div>
